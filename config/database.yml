@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: 18443510
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: finance-tracker_production
-  username: finance-tracker
-  password: <%= ENV['FINANCE-TRACKER_DATABASE_PASSWORD'] %>
+  username: root
+  password: 18443510
