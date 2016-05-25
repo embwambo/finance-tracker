@@ -11,7 +11,7 @@
         <ul class="nav navbar-nav col-md-6">
           <li><%= link_to "My Portfolio", my_portfolio_path %></li>
           <li><%= link_to "My Profile", edit_user_registration_path(current_user)  %></li>
-          <li><%= link_to "Link3", "/path3"  %></li>
+          <li><%= link_to "My Friends", my_friends_path  %></li>
         </ul>
         <ul class="nav nav-bar-right col-md-4">
           <li class="user-name col-md-8 text-right">
@@ -19,7 +19,7 @@
             <%= current_user.full_name.present? ? current_user.full_name : current_user.email %>
           </li>
           <li class="col-md-4 logout">
-            <%= link_to "Logout", destroy_user_session_path(current_user), method: :delete, class: "btn btn-xs btn-danger" %>
+            <li class="col-md-4 logout"><%= link_to(" Logout", destroy_user_session_path, class: 'btn btn-xs btn-danger fa fa-sign-out', method: :delete) %></li>
           </li>
         </ul>
       </div>
